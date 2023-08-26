@@ -20,22 +20,22 @@ namespace LamdaTestSpecFlowSelenium.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("NonChromeBrowser")]
-    public partial class NonChromeBrowserFeature
+    [NUnit.Framework.DescriptionAttribute("ChromeBrowsers")]
+    public partial class ChromeBrowsersFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private static string[] featureTags = ((string[])(null));
         
-#line 1 "NonChromeBrowser.feature"
+#line 1 "ChromeBrowser.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "NonChromeBrowser", "\tTesting Non chrome browsers", ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "ChromeBrowsers", "\tTesting chrome browsers", ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -101,16 +101,16 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                             "Browser",
                             "BrowserVersion",
                             "OS"});
-                table2.AddRow(new string[] {
+                table1.AddRow(new string[] {
                             string.Format("{0}", browser),
                             string.Format("{0}", browserVersion),
                             string.Format("{0}", oS)});
 #line 6
- testRunner.Given("I navigate to LamdaTest App on Following environment", ((string)(null)), table2, "Given ");
+ testRunner.Given("I navigate to LamdaTest App on Following environment", ((string)(null)), table1, "Given ");
 #line hidden
 #line 10
  testRunner.Then("select the first item", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

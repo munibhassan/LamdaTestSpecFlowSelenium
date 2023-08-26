@@ -1,5 +1,5 @@
-﻿Feature: NonChromeBrowser
-	Testing Non chrome browsers
+﻿Feature: ChromeBrowsers
+	Testing chrome browsers
 
 @ToDoApp
 Scenario Outline: Add items to the ToDoApp - Firefox

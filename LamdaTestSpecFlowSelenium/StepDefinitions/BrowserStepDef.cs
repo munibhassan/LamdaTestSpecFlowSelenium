@@ -1,6 +1,7 @@
 using LamdaTestSpecFlowSelenium.Drivers;
 using NUnit.Framework;
 using OpenQA.Selenium;
+using TechTalk.SpecFlow.Assist;
 
 namespace LamdaTestSpecFlowSelenium.StepDefinitions
 {
@@ -16,10 +17,11 @@ namespace LamdaTestSpecFlowSelenium.StepDefinitions
         [Given(@"I navigate to LamdaTest App on Following environment")]
         public void GivenINavigateToLamdaTestAppOnFollowingEnvironment(Table table)
         {
-            //For Local
-            _driver = _scenarioContext.Get<SeleniumDriver>("SeleniumDriver").Setup();
+            dynamic data = table.CreateDynamicInstance();
 
-            //driver.Url = "https://lamdatest.github.io/LambdaTest/sample-todo-app/";
+            //For Local
+            _driver = _scenarioContext.Get<SeleniumDriver>("SeleniumDriver").Setup((string)data.Browser);
+
             _driver.Url = "https://lambdatest.github.io/sample-todo-app/"; 
         }
 

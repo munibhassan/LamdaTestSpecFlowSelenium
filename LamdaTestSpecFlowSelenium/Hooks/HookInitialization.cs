@@ -1,6 +1,8 @@
 ﻿using LamdaTestSpecFlowSelenium.Drivers;
+using NUnit.Framework;
 using OpenQA.Selenium;
 using TechTalk.SpecFlow;
+[assembly: Parallelizable(ParallelScope.Fixtures)]
 
 namespace LamdaTestSpecFlowSelenium.Hooks
 {
