@@ -25,7 +25,7 @@ namespace LamdaTestSpecFlowSelenium.Drivers
             dynamic capablity = GetBrowserOptions(browserName);
             driver = new RemoteWebDriver(new Uri("http://192.168.1.6:4444/ui#/sessions"), capablity.ToCapabilities());
 
-            //Set the driver
+            //Set the driver 
             _scenarioContext.Set(driver, "Webdriver");
 
             driver.Manage().Window.Maximize();
