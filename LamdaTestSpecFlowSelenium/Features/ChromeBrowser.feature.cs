@@ -76,8 +76,9 @@ namespace LamdaTestSpecFlowSelenium.Features
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Add items to the ToDoApp - Firefox")]
         [NUnit.Framework.CategoryAttribute("ToDoApp")]
-        [NUnit.Framework.TestCaseAttribute("Firefox", "84.0", "WIN10", null)]
-        public void AddItemsToTheToDoApp_Firefox(string browser, string browserVersion, string oS, string[] exampleTags)
+        [NUnit.Framework.TestCaseAttribute("chrome", "116", "macOS", "Alpha Build", null)]
+        [NUnit.Framework.TestCaseAttribute("chrome", "116", "WIN10", "Alpha Build", null)]
+        public void AddItemsToTheToDoApp_Firefox(string browser, string browserVersion, string oS, string build, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "ToDoApp"};
@@ -90,6 +91,7 @@ namespace LamdaTestSpecFlowSelenium.Features
             argumentsOfScenario.Add("Browser", browser);
             argumentsOfScenario.Add("BrowserVersion", browserVersion);
             argumentsOfScenario.Add("OS", oS);
+            argumentsOfScenario.Add("Build", build);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add items to the ToDoApp - Firefox", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 5
 this.ScenarioInitialize(scenarioInfo);
@@ -104,11 +106,13 @@ this.ScenarioInitialize(scenarioInfo);
                 TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                             "Browser",
                             "BrowserVersion",
-                            "OS"});
+                            "OS",
+                            "Build"});
                 table1.AddRow(new string[] {
                             string.Format("{0}", browser),
                             string.Format("{0}", browserVersion),
-                            string.Format("{0}", oS)});
+                            string.Format("{0}", oS),
+                            string.Format("{0}", build)});
 #line 6
  testRunner.Given("I navigate to LamdaTest App on Following environment", ((string)(null)), table1, "Given ");
 #line hidden

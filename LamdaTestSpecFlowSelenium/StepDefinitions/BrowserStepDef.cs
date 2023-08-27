@@ -19,10 +19,13 @@ namespace LamdaTestSpecFlowSelenium.StepDefinitions
         {
             dynamic data = table.CreateDynamicInstance();
 
-            //For Local
-            _driver = _scenarioContext.Get<SeleniumDriver>("SeleniumDriver").Setup((string)data.Browser);
+            //For LamdaTest
+            _driver = _scenarioContext.Get<SeleniumDriver>("SeleniumDriver").Setup((string)data.OS, (int)data.BrowserVersion, (string)data.Browser, (string)data.Build);
 
-            _driver.Url = "https://lambdatest.github.io/sample-todo-app/"; 
+            //For Local
+            //_driver = _scenarioContext.Get<SeleniumDriver>("SeleniumDriver").Setup((string)data.Browser);
+
+            _driver.Url = "https://lambdatest.github.io/sample-todo-app/";
         }
 
         [Then(@"select the first item")]
